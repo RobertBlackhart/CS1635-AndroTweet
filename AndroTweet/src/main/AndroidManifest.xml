@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.mcdermotsoft.androtweet" >
+
+	<!-- Permission - Internet Connect -->
+	<uses-permission android:name="android.permission.INTERNET" />
+
+	<!-- Network State Permissions -->
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+		android:launchMode="singleInstance">
+        <activity
+            android:name=".AddAccountActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="x-androtweet-oauth-twitter" android:host="callback"/>
+			</intent-filter>
+        </activity>
+		<activity
+			android:name=".TabHandler"
+			android:configChanges="orientation|screenSize" >
+		</activity>
+		<activity
+			android:name=".TweetActivity"
+			android:configChanges="orientation|screenSize"
+			android:parentActivityName=".TabHandler"
+			android:windowSoftInputMode="adjustResize">
+		</activity>
+		<activity
+			android:name=".ProfileActivity"
+			android:configChanges="orientation|screenSize"
+			android:parentActivityName=".TabHandler">
+		</activity>
+    </application>
+
+</manifest>

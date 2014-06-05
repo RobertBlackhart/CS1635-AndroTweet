@@ -1,0 +1,14 @@
+<uk.co.senab.actionbarpulltorefresh.extras.actionbarcompat.PullToRefreshLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/ptr_layout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<ListView
+		android:id="@+id/timeline"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:divider="@android:color/black"
+		android:dividerHeight="2dp"/>
+
+</uk.co.senab.actionbarpulltorefresh.extras.actionbarcompat.PullToRefreshLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				xmlns:tools="http://schemas.android.com/tools"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+	<RelativeLayout
+		android:id="@+id/topLayout"
+		android:layout_width="match_parent"
+		android:layout_height="180dp"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp">
+
+		<ImageView
+			android:id="@+id/backgroundImage"
+			android:layout_centerHorizontal="true"
+			android:layout_width="350dp"
+			android:layout_height="180dp"
+			android:adjustViewBounds="true"
+			tools:src="@drawable/grey_header_web"/>
+
+		<ImageView
+			android:id="@+id/userImage"
+			android:layout_width="64dp"
+			android:layout_height="64dp"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="10dp"
+			tools:src="@drawable/egg"/>
+
+		<TextView
+			android:id="@+id/realName"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_below="@id/userImage"
+			android:textColor="#ffffff"
+			android:textStyle="bold"
+			android:textSize="20sp"
+			tools:text="Miguel de Icaza"/>
+
+		<TextView
+			android:id="@+id/screenName"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_below="@id/realName"
+			android:textColor="#ffffff"
+			android:textSize="14sp"
+			tools:text="@migueldeicaza"/>
+
+		<TextView
+			android:id="@+id/following"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_below="@id/screenName"
+			android:layout_marginTop="5dp"
+			android:layout_marginBottom="30dp"
+			android:textColor="#ffffff"
+			android:textSize="11sp"
+			tools:text="not following you"/>
+
+		<TextView
+			android:id="@+id/location"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:drawableLeft="@drawable/profile_location"
+			android:drawablePadding="3dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginBottom="10dp"
+			android:layout_alignParentBottom="true"
+			android:autoLink="all"
+			tools:text="Pittsburgh, PA"/>
+
+		<TextView
+			android:id="@+id/link"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:drawableLeft="@drawable/profile_link"
+			android:drawablePadding="3dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginBottom="10dp"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentRight="true"
+			android:autoLink="all"
+			tools:text="buckyoung.com"/>
+
+	</RelativeLayout>
+
+	<TextView
+		android:id="@+id/aboutText"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/topLayout"
+		android:gravity="center"
+		android:textColor="#ffffff"
+		android:layout_marginTop="5dp"
+		android:layout_marginBottom="10dp"
+		tools:text="Founder Xamarin, Simian compaines; Software programmer, founder Mono and Gnome projects"/>
+
+	<LinearLayout
+		android:id="@+id/statsPanel"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_below="@id/aboutText">
+
+		<TextView
+			android:id="@+id/numTweets"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:layout_weight="1"
+			tools:text="200\nTweets"/>
+
+		<TextView
+			android:id="@+id/numFollowers"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:layout_weight="1"
+			tools:text="200\nFollowers"/>
+
+		<TextView
+			android:id="@+id/numFollowees"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:layout_weight="1"
+			tools:text="200\nFriends"/>
+
+	</LinearLayout>
+
+	<View
+		android:id="@+id/divider"
+		android:layout_width="match_parent"
+		android:layout_height="2dp"
+		android:background="#ffffff"
+		android:layout_below="@id/statsPanel"/>
+
+	<TextView
+		android:id="@+id/latestTweets"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Latest Tweets"
+		android:textSize="20sp"
+		android:layout_below="@id/divider"
+		android:layout_centerHorizontal="true"/>
+
+	<ListView
+		android:id="@+id/tweetList"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/latestTweets"/>
+
+</RelativeLayout>

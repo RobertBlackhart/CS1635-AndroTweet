@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	  xmlns:app="http://schemas.android.com/apk/res-auto"
+	  xmlns:tools="http://schemas.android.com/tools"
+	  tools:context="net.mcdermotsoft.androtweet.TweetActivity" >
+
+	<item android:id="@+id/hashtag"
+		  android:title="Hashtag"
+		  android:icon="@drawable/bottom_hash"
+		  app:showAsAction="always" />
+
+	<item android:id="@+id/mention"
+		  android:title="Mention"
+		  android:icon="@drawable/bottom_mentions"
+		  app:showAsAction="always" />
+
+</menu>
